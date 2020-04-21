@@ -1,0 +1,9 @@
+{
+    "python.linting.enabled": true,
+    "python.linting.mypyEnabled": true,
+    "python.linting.flake8Enabled": true,
+    "[python]": {
+        "editor.formatOnSave": true
+    },
+    "python.formatting.provider": "black"
+}
