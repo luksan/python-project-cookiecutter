@@ -8,6 +8,7 @@ with changes inspired by [janw/python-cookiecutter](https://github.com/janw/pyth
 
 Notable differences to the Sourcery-AI template:
 - Excludes development enviroment tools from dev-dependencies
+- Add flake8-bugbear
 
 ## Features
 - Testing with [pytest](https://docs.pytest.org/en/latest/)
@@ -30,6 +31,7 @@ pipx install pipenv
 
 # Install all dev environment tools using pipx
 pipx install flake8
+pipx inject flake8 flake8-bugbear
 pipx install black
 pipx install isort
 pipx install mypy
