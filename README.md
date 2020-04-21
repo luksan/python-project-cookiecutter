@@ -20,11 +20,22 @@ Notable differences to the Sourcery-AI template:
 - Deployment ready with [Docker](https://docker.com/)
 - Continuous Integration with [GitHub Actions](https://github.com/features/actions)
 
+## Tools required globally
+Install with pipx (see Quickstart below), if not already installed.
+- black: formats Python code in a uniform way, without configuration
+- cookiecutter: generate project templates
+- flake8: checks for Python style and programming errors
+- isort: sorts the `import` statements properly
+- mypy: static type-checking for Python
+- pipenv: manage python virtualenvs
+- pipx: manage python-based command line tools
+- pre-commit: Configurable hooks for Git
+
 ## Quickstart
 ```sh
 # Install pipx
-python3 -m pip install pipx
-python3 -m pipx ensurepath
+python -m pip install --user pipx
+python -m pipx ensurepath
 
 # Install pipenv using pipx
 pipx install pipenv
