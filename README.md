@@ -6,6 +6,9 @@ with changes inspired by [janw/python-cookiecutter](https://github.com/janw/pyth
 [GillesJ/python-project-pattern](https://github.com/GillesJ/python-project-pattern), and
 [tim-fi/python_project_template](https://github.com/tim-fi/python_project_template).
 
+Notable differences to the Sourcery-AI template:
+- Excludes development enviroment tools from dev-dependencies
+
 ## Features
 - Testing with [pytest](https://docs.pytest.org/en/latest/)
 - Formatting with [black](https://github.com/psf/black)
@@ -18,12 +21,19 @@ with changes inspired by [janw/python-cookiecutter](https://github.com/janw/pyth
 
 ## Quickstart
 ```sh
-# Install pipx if pipenv and cookiecutter are not installed
+# Install pipx
 python3 -m pip install pipx
 python3 -m pipx ensurepath
 
 # Install pipenv using pipx
 pipx install pipenv
+
+# Install all dev environment tools using pipx
+pipx install flake8
+pipx install black
+pipx install isort
+pipx install mypy
+pipx install pre-commit
 
 # Use cookiecutter to create project from this template
 pipx run cookiecutter gh:luksan/python-project-cookiecutter
@@ -38,6 +48,6 @@ git init
 pipenv install --dev
 
 # Setup pre-commit and pre-push hooks
-pipenv run pre-commit install -t pre-commit
-pipenv run pre-commit install -t pre-push
+pre-commit install -t pre-commit
+pre-commit install -t pre-push
 ```

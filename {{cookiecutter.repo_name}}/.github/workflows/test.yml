@@ -1,6 +1,6 @@
 name: Test
 
-on: 
+on:
   pull_request: {}
   push:
     branches: master
@@ -20,12 +20,16 @@ jobs:
       - name: Install dependencies with pipenv
         run: |
           pip install pipenv
+          pip install isort
+          pip install black
+          pip install mypy
+          pip install flake8
           pipenv install --deploy --dev
 
-      - run: pipenv run isort --recursive --diff
-      - run: pipenv run black --check .
-      - run: pipenv run flake8
-      - run: pipenv run mypy
+      - run: isort --recursive --diff
+      - run: black --check .
+      - run: flake8
+      - run: mypy
       - run: pipenv run pytest --cov --cov-fail-under=100
 
   docker-image:

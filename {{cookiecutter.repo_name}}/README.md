@@ -5,9 +5,17 @@
 # Install dependencies
 pipenv install --dev
 
+# Install development tools, if not already installed
+pipx install flake8
+pipx inject flake8 flake8-bugbear
+pipx install black
+pipx install isort
+pipx install mypy
+pipx install pre-commit
+
 # Setup pre-commit and pre-push hooks
-pipenv run pre-commit install -t pre-commit
-pipenv run pre-commit install -t pre-push
+pre-commit install -t pre-commit
+pre-commit install -t pre-push
 ```
 
 ## Credits

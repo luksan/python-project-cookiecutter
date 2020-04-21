@@ -9,10 +9,5 @@ python_version = "{python_version}"
 [packages]
 
 [dev-packages]
-black = "==19.3b0"
-flake8 = "*"
-isort = "*"
-mypy = "*"
-pre-commit = "*"
 pytest = "*"
 pytest-cov = "*"
