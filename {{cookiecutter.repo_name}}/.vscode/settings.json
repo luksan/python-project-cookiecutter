@@ -1,9 +1,11 @@
 {
     "python.linting.enabled": true,
     "python.linting.mypyEnabled": true,
+    // "python.linting.mypyPath": "~/.local/bin/mypy.exe",
     "python.linting.flake8Enabled": true,
     "[python]": {
         "editor.formatOnSave": true
     },
-    "python.formatting.provider": "black"
+    "python.formatting.provider": "black",
+    // "python.formatting.blackPath": "~/.local/bin/black.exe"
 }
