@@ -1,5 +1,13 @@
 # See https://pre-commit.com/ for usage and config
 repos:
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v2.5.0
+  hooks:
+  - id: end-of-file-fixer
+  - id: mixed-line-ending
+    args: [-f, lf]  # Convert all line-endings to \n
+    exclude_types: [batch]
+
 - repo: local
   hooks:
   - id: isort
